@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover More</title>
+    <link rel="stylesheet" href="/css/discover.css">
+</head>
+<body>
+    <section class="discover-more">
+        <div class="container">
+            <h2>Discover More</h2>
+            <div class="content">
+                <!-- Recommended Courses Section -->
+                <div class="card" id="courses">
+                    <h3>Recommended Courses</h3>
+                    <ul>
+                        <li>Beginner's Guide to Web Development</li>
+                        <li>Advanced Data Science with Python</li>
+                        <li>Intro to Machine Learning</li>
+                    </ul>
+                    <button class="learn-more-btn" onclick="toggleContent('courses-content')">Learn More</button>
+                    <div id="courses-content" class="more-info">
+                        <p>Explore in-depth courses to boost your skills in web development, data science, and machine learning.</p>
+                    </div>
+                </div>
+
+                <!-- Success Stories Section -->
+                <div class="card" id="success-stories">
+                    <h3>Student Success Stories</h3>
+                    <button class="learn-more-btn" onclick="toggleContent('stories-content')">Discover Stories</button>
+                    <div id="stories-content" class="more-info">
+                        <p>Read inspiring stories of students who transformed their careers with our courses.</p>
+                    </div>
+                </div>
+
+                <!-- Free Resources Section -->
+                <div class="card" id="free-resources">
+                    <h3>Free Resources</h3>
+                    <ul>
+                        <li><a href="#">Download eBook: 'A Beginner's Guide to Python'</a></li>
+                        <li><a href="#">Free Coding Challenge: HTML Basics</a></li>
+                    </ul>
+                    <button class="learn-more-btn" onclick="toggleContent('resources-content')">Explore Resources</button>
+                    <div id="resources-content" class="more-info">
+                        <p>Access free study materials to jumpstart your learning journey.</p>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events Section -->
+                <div class="card" id="upcoming-events">
+                    <h3>Upcoming Events</h3>
+                    <button class="learn-more-btn" onclick="toggleContent('events-content')">See Upcoming Events</button>
+                    <div id="events-content" class="more-info">
+                        <ul>
+                            <li>Live Webinar: "AI in Education" - January 10</li>
+                            <li>Workshop: "Web Development for Beginners" - January 20</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/discover.js"></script>
+</body>
+</html>

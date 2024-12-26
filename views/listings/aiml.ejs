@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI/ML Page</title>
-  <link rel="stylesheet" href="/css/AIML.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Roadmap</title>
+    <link rel="icon" href="../game/images/mario.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../game/images/mario.svg">
+    <link rel="stylesheet" href="/css/aiml.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=routine" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+           margin-right: 10px;
+        }
+        </style>
 </head>
 <body>
-  <header>
-    <h1>ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING </h1>
-  </header>
+    <div class="sky">
+        <div class="clouds-container">
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+        </div>
+        <div class="content">
+            <h1 class="title">AI/ML Roadmap</h1>
+            <div class="map-container">
+                <img src="/css/kimg.jpg" alt="AI/ML Levels Map" class="map-image">
 
-  <main>
-    <div class="container">
-      <div class="card completed">
-        <div class="status-icon">🤖</div>
-        <div class="status-text">Introduction</div>
-      </div>
-      <div class="card progress">
-        <div class="status-icon">📊</div>
-        <div class="status-text">Data Processing</div>
-      </div>
-      <div class="card locked">
-        <div class="status-icon">🧠</div>
-        <div class="status-text">Deep Learning</div>
-      </div>
-      <div class="card locked">
-        <div class="status-icon">📈</div>
-        <div class="status-text">ML Models</div>
-      </div>
-      <div class="card locked">
-        <div class="status-icon">🚀</div>
-        <div class="status-text">Project Deployment</div>
-      </div>
+                <!-- Buttons for AI/ML Levels -->
+                <a href="/home/aiml1"><button class="level" style="--x: 77.9%; --y: 94.3%;" data-info="Introduction to AI and ML" title="Introduction to AI">1</button></a>
+                <a href="/home/aiml2"><button class="level" style="--x: 86.3%; --y: 82%;" data-info="Python Programming for AI" title="Python Basics for AI">2</button></a>
+                <button class="level" style="--x: 66.7%; --y: 76.15%;" data-info="Mathematics for Machine Learning" title="Math for ML">3</button>
+                <button class="level" style="--x: 40%; --y: 74.3%;" data-info="Supervised Learning Algorithms" title="Supervised Learning">4</button>
+                <button class="level" style="--x: 22%; --y: 70%;" data-info="Unsupervised Learning Algorithms" title="Unsupervised Learning">5</button>
+                <button class="level" style="--x: 41.6%; --y: 63%;" data-info="Data Preprocessing and Cleaning" title="Data Preprocessing">6</button>
+                <button class="level" style="--x: 67%; --y: 59%;" data-info="Feature Engineering and Selection" title="Feature Engineering">7</button>
+                <button class="level" style="--x: 92%; --y: 57%;" data-info="Model Evaluation and Tuning" title="Model Evaluation">8</button>
+                <button class="level" style="--x: 86%; --y: 47%;" data-info="Deep Learning Foundations" title="Deep Learning">9</button>
+                <button class="level" style="--x: 64.7%; --y: 37%;" data-info="Convolutional Neural Networks (CNNs)" title="CNNs">10</button>
+                <button class="level" style="--x: 36%; --y: 32%;" data-info="Recurrent Neural Networks (RNNs)" title="RNNs">11</button>
+                <button class="level" style="--x: 18%; --y: 25.8%;" data-info="Natural Language Processing (NLP)" title="NLP">12</button>
+                <button class="level" style="--x: 38.5%; --y: 19%;" data-info="Reinforcement Learning" title="Reinforcement Learning">13</button>
+                <button class="level" style="--x: 71.3%; --y: 15.15%;" data-info="AI in Industry Applications" title="AI Applications">14</button>
+                <button class="level" style="--x: 88%; --y: 5%;" data-info="Advanced AI and ML Topics" title="Advanced Topics">15</button>
+
+            </div>
+        </div>
     </div>
-  </main>
+    
+    <button class="dark-mode-button" onclick="toggleDarkMode()"><span class="material-symbols-outlined"> routine</span></button>
+    <audio autoplay loop>
+        <source src="sounds/aboveground_bgm.ogg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-  <footer>
-    <p>&copy; 2024 AI/ML Gamified Learning. All rights reserved.</p>
-  </footer>
+    <div id="popup-box" class="popup" style="display: none; position: absolute; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; border-radius: 5px; pointer-events: none;">Hello Hi</div>
 
-  <!-- Link to JavaScript -->
-  <script src="/js/AIML.js"></script>
+    <script src="/js/aiml.js"></script>
 </body>
 </html>

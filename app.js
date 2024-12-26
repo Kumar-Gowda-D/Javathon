@@ -99,6 +99,14 @@ app.get("/home/aiml",(req,res)=>{
     res.render("listings/aiml.ejs",)
 });
 
+app.get("/home/aiml1",(req,res)=>{
+    res.render("listings/aiml1.ejs",)
+});
+
+app.get("/home/aiml2",(req,res)=>{
+    res.render("listings/aiml2.ejs",)
+});
+
 app.get("/home/help",saveRedirectUrl,isLoggedIn,(req,res)=>{
     res.render("listings/help.ejs",)
 });
@@ -110,6 +118,10 @@ app.post("/home/help",async(req,res)=>{
         owner:req.user._id
     });
     res.redirect("help");
+});
+ 
+app.get("/home/discover",(req,res)=>{
+    res.render("listings/discover.ejs");
 });
 
 app.listen(3000,(req,res)=>{

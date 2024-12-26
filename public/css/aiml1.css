@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #333;
+}
+
+.container {
+    max-width: 720px;
+    margin: 30px auto;
+    background: #bcd1e6;
+    padding: 20px;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #2b6cb0;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.video-container {
+    margin: 20px 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px; 
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
+}
+
+.quiz {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.quiz:hover {
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+}
+
+.download {
+    background: linear-gradient(135deg, #2196f3, #64b5f6);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+}
+
+.download:hover {
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #888;
+}
