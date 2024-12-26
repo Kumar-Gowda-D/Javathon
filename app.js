@@ -13,6 +13,8 @@ const Help = require("./models/help.js");
 const isLoggedIn = require("./middleware.js");
 const saveRedirectUrl = require("./middleware.js");
 
+
+
 app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
@@ -20,7 +22,7 @@ app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"public")));
 
 const MONGO_URL="mongodb://127.0.0.1:27017/education";
-main().then(()=>console.log("connected to DB"))
+main().then(()=>console.log("connected to DataBase"))
 .catch(err => console.log(err));
 async function main() {
   await mongoose.connect(MONGO_URL);
@@ -62,7 +64,7 @@ app.post("/signup",async(req,res,next)=>{
         if(err){
             return next(err);
         }
-        req.flash("success","Welcome to wanderlust");
+        req.flash("success","Welcome to smile");
         res.redirect("/home");
     })
     }catch(e){
@@ -97,15 +99,18 @@ app.get("/home/aiml",(req,res)=>{
     res.render("listings/aiml.ejs",)
 });
 
-app.get("/home/help",(req,res)=>{
+app.get("/home/help",saveRedirectUrl,isLoggedIn,(req,res)=>{
     res.render("listings/help.ejs",)
 });
 
-app.post("/home/help",(req,res)=>{
+app.post("/home/help",async(req,res)=>{
     let{message} = req.body;
-    Help.insertMany({message:message});
+    await Help.insertMany({
+        message:message,
+        owner:req.user._id
+    });
     res.redirect("help");
-})
+});
 
 app.listen(3000,(req,res)=>{
     console.log("Listening to the port 3000");
