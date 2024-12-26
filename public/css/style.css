@@ -1,0 +1,280 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    overflow: auto;
+}
+
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 1.5rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.f-info-links a{
+text-decoration: none;
+color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links{
+    width: 100%;
+}
+.f-info-socials{
+    width: 100%;
+}
+.f-info-socials i{
+    font-size: 2rems;
+    margin: 1rem;
+}
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rems;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.hero-title .highlight {
+    color: #ff6f61;
+    text-shadow: 0 4px 15px rgba(255, 111, 97, 0.6);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #cce7ff;
+    margin: 1rem 0;
+    max-width: 600px;
+}
+
+.cta-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-btn {
+    background: #ff6f61;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: #ff6f61;
+    border: 2px solid #ff6f61;
+}
+
+.cta-btn.secondary:hover {
+    background: #ff6f61;
+    color: white;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #d4e1f1;
+}
+
+.background {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+  
+  section {
+    padding-left: 20px;
+    color: #548888;;
+  }
+  
+  header h1 {
+    font-size: 1.2rem;
+    color: #97d7f8;
+    margin: 0;
+  }
+
+  
+  /* Roadmap Section */
+  .roadmap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  
+  .roadmap-card1 {
+    width: 200px;
+    height: 200px;
+    background-image: url("cyber.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    color: #E0FFFF;
+    margin-left: 20px;
+   
+  }
+  .roadmap-card2 {
+    width: 200px;
+    height: 200px;
+    background-image: url("cloud.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    color: #E0FFFF;
+    margin-left: 20px;
+
+  }
+  .roadmap-card3 {
+    width: 200px;
+    height: 200px;
+    background-image: url("web3blockchain.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    color: #E0FFFF;
+    margin-left: 20px;
+
+  }
+  .roadmap-card4 {
+    width: 200px;
+    height: 200px;
+    background-image: url("cyber.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    color: #E0FFFF;
+    margin-left: 20px;
+ 
+  }
+  
+  .roadmap-card1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+  }
+  .roadmap-card2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+  }
+  .roadmap-card3:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+  }
+  .roadmap-card4:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+  }
+  
+  

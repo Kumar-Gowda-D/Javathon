@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .background::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 255, 255, 0.5));
+    animation: gradientMove 10s linear infinite;
+    z-index: 0;
+    filter: blur(100px);
+  }
+  
+  .highlight {
+    position: relative;
+    top: -5px;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .highlight h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #000000;
+    text-shadow: 0 0 15px #ebf0f0, 0 0 30px rgba(241, 245, 245, 0.5);
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  .highlight h1 .smile {
+    color: #000000;
+    text-shadow: 0 0 20px #e6ebeb, 0 0 40px rgba(255, 0, 255, 0.7);
+  }
+  
+  .highlight p {
+    font-size: 1.2rem;
+    color: #b3e5fc;
+    margin-top: 0.3rem;
+  }
+  
+  .login-box {
+    position: relative;
+    left:17px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    width: 300px; 
+    height:230px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .login-box h3 {
+    font-size: 1 rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .login-box input {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+  }
+  
+  .login-box button {
+    width: 80%;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, #ff0080, #ff6600);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1 rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .login-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.5);
+  }
+  
+  .signup {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .signup a {
+    color: #ff00ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .signup a:hover {
+    color: #ff6600;
+  }
+  @keyframes gradientMove {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 15px #00e6e6, 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.7);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

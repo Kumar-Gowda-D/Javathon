@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Platform Chatbot</title>
+    <link rel="stylesheet" href="/css/help.css">
+</head>
+<body>
+    <h1>Smile</h1>
+
+    <div class="chat-container">
+        <div id="question-box">
+            <button class="question" onclick="displayAnswer('greeting-hello')">Hello!</button>
+            <button class="question" onclick="displayAnswer('greeting-how-are-you')">How are you?</button>
+            <button class="question" onclick="displayAnswer('website-about')">What is this website about?</button>
+            <button class="question" onclick="displayAnswer('website-courses')">What courses are available on this website?</button>
+            <button class="question" onclick="displayAnswer('website-enroll')">How can I enroll in a course?</button>
+            <button class="question" onclick="displayAnswer('website-features')">What features does this platform offer?</button>
+            <button class="question" onclick="displayAnswer('website-contact')">How can I contact support?</button>
+            <button class="question" onclick="displayAnswer('greeting-goodbye')">Goodbye!</button>
+        </div>
+
+        <div id="answer-box">
+            <div id="answer-content" class="answer">
+                Click on a question to see the answer.
+            </div>
+        </div>
+    </div>
+
+    <div class="textbox-container">
+        <form onsubmit="submitQuestion()" method="post" action="/home/help">
+        <input type="text" id="user-question" placeholder="Ask anything..." name="message">
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Education Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/help.js"></script>
+</body>
+</html>

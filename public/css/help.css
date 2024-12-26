@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.chat-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+#question-box {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+#answer-box {
+    width: 65%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    overflow-y: auto;
+}
+
+.question {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.question:hover {
+    background-color: #0056b3;
+}
+
+.answer {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.textbox-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.textbox-container input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.textbox-container input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.textbox-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #777;
+}
