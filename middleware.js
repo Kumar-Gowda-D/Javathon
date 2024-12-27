@@ -1,7 +1,7 @@
 const isLoggedIn = (req,res,next)=>{
     if(!req.isAuthenticated()){
         req.session.redirectUrl = req.originalUrl;
-        req.flash("error","You must be logged in before using wanderLust");
+        req.flash("error","You must be logged in before using Smile");
         return res.redirect("/login");
     }
     next();

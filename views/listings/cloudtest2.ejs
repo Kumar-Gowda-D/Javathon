@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Service Models</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #141e30,#243b55);
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 2px solid #007BFF;
+        }
+
+        h1 {
+            text-align: center;
+            color: #15c5d2;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-family: monospace;
+            text-shadow: 0 0 15px rgba(245, 166, 35, 0.8);
+        }
+
+        .question {
+            margin-bottom: 30px;
+        }
+
+        .question p {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: monospace;
+            color: #4b4b4b;
+            text-shadow: 0 0 10px rgba(75, 75, 75, 0.6);
+        }
+
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: transform 0.1s ease;
+            padding: 8px;
+            border-radius: 8px;
+            font-family: system-ui;
+            color: #333;
+        }
+
+        .options label:hover {
+            transform: scale(1.02);
+            background-color: #f1f1f1;
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+        }
+
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.2s;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .result {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+            padding: 20px;
+            background: #f0f8ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            border-left: 5px solid #007BFF;
+        }
+
+        .result:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .correct-answers {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e6f7ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .correct-answers li {
+            list-style-type: none;
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+            text-shadow: 0 0 5px #f00;
+        }
+
+    </style>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Service Models</h1>
+        <form id="quizForm">
+            <div id="quiz"></div>
+            <button type="submit">Submit Quiz</button>
+        </form>
+        <div class="result" id="result">
+            <p id="score"></p>
+            <ul class="correct-answers" id="correctAnswers"></ul>
+        </div>
+    </div>
+    <script>
+        const questions = [
+            {
+                question: "Which of the following is an example of Software as a Service (SaaS)?",
+                options: ["Amazon Web Services", "Dropbox", "Microsoft Azure", "Google Cloud"],
+                correct: 1
+            },
+            {
+                question: "What does Platform as a Service (PaaS) provide?",
+                options: ["Physical hardware", "Development platforms and tools", "Storage", "None of the above"],
+                correct: 1
+            },
+            {
+                question: "Which cloud service model is primarily responsible for providing virtualized computing resources over the internet?",
+                options: ["IaaS", "PaaS", "SaaS", "None of the above"],
+                correct: 0
+            },
+            {
+                question: "What is an example of Infrastructure as a Service (IaaS)?",
+                options: ["Google Docs", "AWS EC2", "Microsoft PowerBI", "Google Drive"],
+                correct: 1
+            },
+            {
+                question: "What is the main responsibility of users in a SaaS model?",
+                options: ["Managing the infrastructure", "Developing the application", "Using the software", "All of the above"],
+                correct: 2
+            },
+            {
+                question: "Which service model allows developers to focus on creating applications without managing the underlying hardware?",
+                options: ["PaaS", "SaaS", "IaaS", "None of the above"],
+                correct: 0
+            },
+            {
+                question: "Which of the following is a primary benefit of using IaaS?",
+                options: ["Cost savings on software", "Scalability of virtual machines and storage", "Full control over the software", "None of the above"],
+                correct: 1
+            },
+            {
+                question: "What is an example of a PaaS provider?",
+                options: ["AWS Lambda", "Heroku", "Google Docs", "Dropbox"],
+                correct: 1
+            },
+            {
+                question: "Which service model is the easiest to manage for end-users?",
+                options: ["IaaS", "PaaS", "SaaS", "None of the above"],
+                correct: 2
+            }
+        ];
+
+        const quizElement = document.getElementById('quiz');
+        const resultElement = document.getElementById('result');
+        const scoreElement = document.getElementById('score');
+        const correctAnswersElement = document.getElementById('correctAnswers');
+
+        function loadQuiz() {
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
+
+                const questionTitle = document.createElement('p');
+                questionTitle.textContent = `${index + 1}. ${q.question}`;
+                questionDiv.appendChild(questionTitle);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.classList.add('options');
+                q.options.forEach((option, i) => {
+                    const label = document.createElement('label');
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = `question${index}`;
+                    input.value = i;
+                    label.appendChild(input);
+                    label.append(` ${option}`);
+                    optionsDiv.appendChild(label);
+                });
+
+                questionDiv.appendChild(optionsDiv);
+                quizElement.appendChild(questionDiv);
+            });
+        }
+
+        document.getElementById('quizForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let score = 0;
+            const answers = [];
+            questions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name=question${index}]:checked`);
+                const correctOption = q.correct;
+                const correctAnswer = q.options[correctOption];
+
+                if (selectedOption) {
+                    const selectedValue = parseInt(selectedOption.value);
+                    if (selectedValue === correctOption) {
+                        score++;
+                        answers.push(`<li><span class="correct">Correct:</span> ${q.question} - <span>${correctAnswer}</span></li>`);
+                    } else {
+                        answers.push(`<li><span class="incorrect">Incorrect:</span> ${q.question} - <span>${correctAnswer}</span></li>`);
+                    }
+                } else {
+                    answers.push(`<li><span class="incorrect">Unanswered:</span> ${q.question} - <span>${correctAnswer}</span></li>`);
+                }
+            });
+
+            scoreElement.innerHTML = `Your Score: ${score} / ${questions.length}`;
+            correctAnswersElement.innerHTML = answers.join('');
+            resultElement.style.display = 'block';
+        });
+
+        loadQuiz();
+    </script>
+</body>
+</html>
