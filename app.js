@@ -107,6 +107,16 @@ app.get("/home/aiml2",(req,res)=>{
     res.render("listings/aiml2.ejs",)
 });
 
+app.get("/home/cloud",(req,res)=>{
+    res.render("listings/cloud.ejs");
+});
+app.get("/home/cloud1",(req,res)=>{
+    res.render("listings/cloud1.ejs");
+});
+app.get("/home/cloud2",(req,res)=>{
+    res.render("listings/cloud2.ejs");
+});
+
 app.get("/home/help",saveRedirectUrl,isLoggedIn,(req,res)=>{
     res.render("listings/help.ejs",)
 });

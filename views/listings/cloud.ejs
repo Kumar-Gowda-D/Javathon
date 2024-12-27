@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Roadmap</title>
+    <link rel="icon" href="../game/images/mario.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../game/images/mario.svg">
+    <link rel="stylesheet" href="/css/AIML.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=routine" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+           margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sky">
+        <div class="clouds-container">
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+        </div>
+        <div class="content">
+            <h1 class="title">Cloud Computing Roadmap</h1>
+            <div class="map-container">
+                <img src="/css/kimg.jpg" alt="Cloud Computing Levels Map" class="map-image">
+
+                <!-- First Button with Anchor Tag for Redirection -->
+                <a href="/home/cloud1">
+                    <button class="level" style="--x: 77.9%; --y: 94.3%;" data-info="Introduction to cloud" title="Introduction to Cloud Computing">1</button>
+                </a>
+                
+                <!-- Second Button with Anchor Tag for Redirection -->
+                <a href="/home/cloud2">
+                    <button class="level" style="--x: 86.3%; --y: 82%;" data-info="cloud providers" title="Cloud Service Models">2</button>
+                </a>
+
+                <!-- Other Buttons without Anchor Tag for Redirection -->
+                <button class="level" style="--x: 66.7%; --y: 76.15%;" data-info="cloud infrastructure" title="Virtualization">3</button>
+                <button class="level" style="--x: 40%; --y: 74.3%;" data-info="core cloud service" title="Storage Solutions">4</button>
+                <button class="level" style="--x: 22%; --y: 70%;" data-info="storage service" title="Networking Basics">5</button>
+                <button class="level" style="--x: 41.6%; --y: 63%;" data-info="Database service" title="Security in Cloud">6</button>
+                <button class="level" style="--x: 67%; --y: 59%;" title="DevOps and Cloud">7</button>
+                <button class="level" style="--x: 92%; --y: 57%;" title="Serverless Computing">8</button>
+                <button class="level" style="--x: 86%; --y: 47%;" title="Kubernetes and Containers">9</button>
+                <button class="level" style="--x: 64.7%; --y: 37%;" title="Cloud Migration">10</button>
+                <button class="level" style="--x: 36%; --y: 32%;" title="Hybrid Cloud">11</button>
+                <button class="level" style="--x: 18%; --y: 25.8%;" title="Edge Computing">12</button>
+                <button class="level" style="--x: 38.5%; --y: 19%;" title="Cloud Monitoring">13</button>
+                <button class="level" style="--x: 71.3%; --y: 15.15%;" title="Case Studies">14</button>
+                <button class="level" style="--x: 88%; --y: 5%;" title="Advanced Topics">15</button>
+
+            </div>
+        </div>
+    </div>
+    
+    <button class="dark-mode-button" onclick="toggleDarkMode()"><span class="material-symbols-outlined">
+        routine</span></button>
+
+    <audio autoplay loop>
+        <source src="sounds/aboveground_bgm.ogg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="popup-box" class="popup" style="display: none; position: absolute; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; border-radius: 5px; pointer-events: none;">Hello Hi</div>
+
+    <script src="/js/AIML.js"></script>
+</body>
+</html>
