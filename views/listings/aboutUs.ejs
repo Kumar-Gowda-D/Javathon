@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Smile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #f0f0f0; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+      
+        .about-us {
+            flex: 1;
+            background: transparent;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .about-us .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-us h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #ff5722;
+        }
+
+        .about-us p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        .about-us h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #ff5722;
+        }
+
+        .about-us ul {
+            list-style-type: none;
+            padding-left: 20px;
+            color: #e0e0e0;
+        }
+
+        .about-us ul li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        #join-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #join-button:hover {
+            background-color: #e64a19;
+        }
+        footer {
+            background: rgba(20, 30, 48, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="about-us">
+        <div class="content">
+            <h1>About Us</h1>
+            <p>
+                Welcome to Smile, an innovative education platform designed to make learning programming languages fun, accessible, and interactive for everyone. Our mission is to empower individuals from all walks of life to unlock their potential by providing high-quality, easy-to-understand resources that make learning to code an enjoyable experience.
+            </p>
+            <p>
+                At Smile, we believe that programming is a skill everyone should have access to. Whether you're a complete beginner or looking to enhance your coding abilities, we offer comprehensive tutorials, hands-on exercises, and expert guidance to help you succeed. Our platform covers a wide range of programming languages, from the basics of HTML, CSS, and JavaScript to advanced topics like Python, Java, and more.
+            </p>
+            <h2>What Makes Smile Different?</h2>
+            <ul>
+                <li>Interactive Learning: Engage with live coding challenges and real-time feedback to solidify your skills.</li>
+                <li>Comprehensive Courses: Step-by-step courses tailored to different skill levels, ensuring you learn at your own pace.</li>
+                <li>Expert Mentorship: Learn from experienced mentors who provide guidance and support to help you navigate your learning journey.</li>
+                <li>Community Driven: Join a vibrant community of learners and developers where you can share ideas, ask questions, and collaborate on projects.</li>
+            </ul>
+            <%if(!currUser){%>
+            <a href="/signup"><button id="join-button">Join Us Today!</button></a>
+            <%}%>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Smile - Empowering Learners</p>
+    </footer>
+
+</body>
+</html>

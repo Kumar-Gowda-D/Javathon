@@ -15,7 +15,7 @@ function displayAnswer(question) {
             answer = "We offer courses on various programming languages, including Python, JavaScript, Java, C++, and more. You can check our courses section for detailed information.";
             break;
         case 'website-enroll':
-            answer = "You can enroll in a course by visiting the 'Courses' section and clicking on the 'Enroll' button next to the course you are interested in.";
+            answer = "This platform is free to use, Go to Get started section in home page";
             break;
         case 'website-features':
             answer = "This platform offers features like video tutorials, quizzes, interactive coding exercises, and certificates of completion. We aim to provide a comprehensive learning experience.";

@@ -161,6 +161,10 @@ app.get("/home/cloud/test2",(req,res)=>{
     res.render("listings/cloudtest2.ejs");
 });
 
+app.get("/home/aboutUs",(req,res)=>{
+    res.render("listings/aboutUs.ejs");
+});
+
 app.get("/home/help",saveRedirectUrl,isLoggedIn,(req,res)=>{
     res.render("listings/help.ejs",)
 });

@@ -34,3 +34,35 @@
         </div>
     </div>
 </div>
+
+<div class="moving-words">
+    <pre>Smile Platform - Learn. Practice. Excel.     | Join Us Today! |     Empowering Tomorrow's Leaders!</pre>
+</div>
+<style>
+.main-content {
+    padding-bottom: 100px; 
+}
+
+.moving-words {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.moving-words pre {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+</style>
