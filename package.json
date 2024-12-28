@@ -1,6 +1,6 @@
 {
   "engines":{
-    "node": "version_of_node"
+    "node": "20.18.0"
   },
   "name": "login_signup",
   "version": "1.0.0",
