@@ -1,3 +1,6 @@
+if(process.env.NODE_ENV != "production"){
+    require('dotenv').config();
+    }
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -13,7 +16,8 @@ const Help = require("./models/help.js");
 const isLoggedIn = require("./middleware.js");
 const saveRedirectUrl = require("./middleware.js");
 const nodemailer = require('nodemailer');
-require('dotenv').config();
+const MongoStore = require('connect-mongo');
+
 
 app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
@@ -28,11 +32,31 @@ async function main() {
   await mongoose.connect(MONGO_URL);
 }
 
-app.use(session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true,
-  }));
+const store = MongoStore.create({
+    mongoUrl: MONGO_URL,
+    crypto:{
+      secret: "secretekey",
+    },
+    touchAfter:24*3600,
+  });
+  
+  store.on("error",()=>{
+    console.log("ERROR in MONGO SESSION STORE",err);
+  });
+  
+  const sessionOption = {
+    store,
+    secret:"secretekey",
+    resave:false,
+    saveUninitialized:true,
+    cookie:{
+      expires: Date.now()+7*24*60*60*1000,
+      maxAge: 7*24*60*60*1000,
+      httpOnly: true,
+    },
+  };
+
+app.use(session(sessionOption));
 app.use(flash());
 
 app.use(passport.initialize());
