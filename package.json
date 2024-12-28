@@ -1,4 +1,7 @@
 {
+  "engines":{
+    "node": "version_of_node"
+  },
   "name": "login_signup",
   "version": "1.0.0",
   "main": "app.js",

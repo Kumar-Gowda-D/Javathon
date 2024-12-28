@@ -21,7 +21,7 @@ app.use(methodOverride('_method'));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"public")));
 
-const MONGO_URL="mongodb://127.0.0.1:27017/education";
+const MONGO_URL="mongodb+srv://kumargowdad17:oqXZvtRRZQDpXeZJ@cluster0.ka59b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 main().then(()=>console.log("connected to DataBase"))
 .catch(err => console.log(err));
 async function main() {
@@ -78,7 +78,7 @@ app.post("/signup", async (req, res, next) => {
                 return next(err);
             }
             const mailOptions = {
-                from: '"Smile Team" <your-email@gmail.com>', 
+                from: '"Smile Team"', 
                 to: email, 
                 subject: "Welcome to Smile!", 
                 text: `Hello ${username},\n\nWelcome to Smile! We're excited to have you on board.\n\nBest regards,\nThe Smile Team`, 
